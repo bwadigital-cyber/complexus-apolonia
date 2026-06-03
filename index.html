@@ -3,591 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apolónia Complexus - Pastelaria, Padaria & Pizzaria Premium no Kilamba. Menus digitais, cardápios completos e encomendas via WhatsApp.">
+    <meta name="theme-color" content="#0A3366">
     <title>Apolónia Complexus | Menu Digital & Website Oficial</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-blue: #0A3366; 
-            --accent-blue: #00509d;
-            --soft-blue: rgba(10, 51, 102, 0.05);
-            --light-bg: #fdfdfd;
-            --white: #ffffff;
-            --dark-text: #1d2d44;
-            --gray-text: #5c677d;
-            --border-color: #e9ecef;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--light-bg);
-            color: var(--dark-text);
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Alerta de Topo */
-        .top-alert {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            text-align: center;
-            padding: 10px 0;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        /* Header Premium */
-        header {
-            background-color: var(--white);
-            padding: 15px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-box {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .brand-logo-img {
-            height: 55px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .brand-sub {
-            font-size: 11px;
-            color: var(--gray-text);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-top: -2px;
-        }
-
-        .nav-menu {
-            display: none;
-            gap: 25px;
-        }
-
-        .nav-menu a {
-            color: var(--dark-text);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary-blue);
-        }
-
-        .header-status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: rgba(37, 211, 102, 0.1);
-            color: #25D366;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .header-status-badge span {
-            width: 8px;
-            height: 8px;
-            background-color: #25D366;
-            border-radius: 50%;
-        }
-
-        /* Hero Secção */
-        .hero {
-            background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.94)), url('img/apolonia28.jpg') no-repeat center center/cover;
-            padding: 100px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 16px;
-            color: var(--gray-text);
-            max-width: 700px;
-            margin: 0 auto 35px auto;
-            line-height: 1.8;
-        }
-
-        .cta-btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            text-decoration: none;
-            padding: 16px 36px;
-            font-weight: 600;
-            font-size: 14px;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(10, 51, 102, 0.15);
-        }
-
-        .cta-btn-primary:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-2px);
-        }
-
-        /* Secção de Flyers Oficiais do Instagram */
-        .flyers-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .sec-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .sec-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 34px;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-        }
-
-        .sec-header p {
-            font-size: 15px;
-            color: var(--gray-text);
-        }
-
-        .flyers-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        .flyer-card {
-            background-color: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease;
-        }
-
-        .flyer-card:hover {
-            transform: scale(1.02);
-        }
-
-        .flyer-img-box {
-            width: 100%;
-            height: auto;
-            cursor: pointer;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-        }
-
-        .flyer-img-box img {
-            width: 100%;
-            display: block;
-            height: auto;
-        }
-
-        .flyer-img-box .overlay-zoom {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(10, 51, 102, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
-
-        .flyer-img-box:hover .overlay-zoom {
-            opacity: 1;
-        }
-
-        .flyer-body {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .flyer-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 5px;
-        }
-
-        /* Menu Interativo de Itens */
-        .menu-section {
-            padding: 90px 0;
-        }
-
-        .tabs-row {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 45px;
-            flex-wrap: wrap;
-        }
-
-        .tab-link {
-            background-color: var(--white);
-            border: 1px solid var(--border-color);
-            color: var(--dark-text);
-            padding: 14px 28px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .tab-link:hover, .tab-link.active {
-            background-color: var(--primary-blue);
-            border-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .menu-display-grid {
-            display: none;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        .menu-display-grid.active {
-            display: grid;
-        }
-
-        .menu-item-card {
-            background-color: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
-        }
-
-        .item-img-container {
-            height: 250px;
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .item-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .item-badge {
-            position: absolute;
-            top: 15px; right: 15px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-
-        .item-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .item-title {
-            font-size: 19px;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 8px;
-        }
-
-        .item-description {
-            font-size: 13.5px;
-            color: var(--gray-text);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .item-foot {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border-color);
-            padding-top: 18px;
-            margin-top: auto;
-        }
-
-        .item-price-tag {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--dark-text);
-        }
-
-        .btn-order-whatsapp {
-            background-color: var(--white);
-            border: 1px solid var(--primary-blue);
-            color: var(--primary-blue);
-            padding: 10px 20px;
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-        }
-
-        .btn-order-whatsapp:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        /* Secção Galeria de Espaço/Ambiente */
-        .experience-section {
-            padding: 90px 0;
-            background-color: var(--white);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .gallery-item {
-            height: 220px;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer Imperial */
-        footer {
-            background-color: var(--white);
-            padding: 60px 0 30px 0;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer-logo {
-            height: 65px;
-            margin-bottom: 20px;
-        }
-
-        .footer-address {
-            font-size: 14px;
-            color: var(--dark-text);
-            max-width: 500px;
-            margin: 0 auto 25px auto;
-            line-height: 1.6;
-        }
-
-        .footer-address strong {
-            color: var(--primary-blue);
-        }
-
-        .instagram-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--gray-text);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s ease;
-        }
-
-        .instagram-link:hover {
-            color: #e1306c;
-        }
-
-        .bwa-signature {
-            margin-top: 50px;
-            font-size: 11px;
-            color: #a5b1c2;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .bwa-signature span {
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
-
-        /* Lightbox Modal para ver as Imagens em Grande */
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            top:0; left:0; width:100%; height:100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 4px;
-            box-shadow: 0 0 20px rgba(255,255,255,0.1);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 25px; right: 35px;
-            color: white;
-            font-size: 35px;
-            cursor: pointer;
-        }
-
-        /* Modal do Takeaway */
-        .modal-mask {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(29, 45, 68, 0.6);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-wrapper {
-            background-color: var(--white);
-            border-radius: 6px;
-            padding: 40px 30px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            border-top: 4px solid var(--primary-blue);
-        }
-
-        .modal-dismiss {
-            position: absolute;
-            top: 15px; right: 20px;
-            font-size: 24px;
-            color: var(--gray-text);
-            cursor: pointer;
-        }
-
-        .modal-wrapper h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            color: var(--primary-blue);
-            margin-bottom: 12px;
-        }
-
-        .routing-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .routing-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: var(--light-bg);
-            border: 1px solid var(--border-color);
-            color: var(--dark-text);
-            padding: 15px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .routing-btn:hover {
-            border-color: var(--primary-blue);
-            color: var(--primary-blue);
-            background: var(--soft-blue);
-        }
-
-        @media (min-width: 768px) {
-            .nav-menu { display: flex; }
-            .hero h1 { font-size: 56px; }
-            .flyers-grid { grid-template-columns: repeat(2, 1fr); }
-            .menu-display-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (min-width: 1024px) {
-            .menu-display-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -678,8 +99,8 @@
                         <div class="item-title">Pizza à Portuguesa</div>
                         <p class="item-description">Molho de tomate artesanal, queijo mozzarella de alta fusão, fiambre premium, rodelas de ovo cozido cozinhadas no ponto, cebola e pimentos selecionados.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">9.500 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Pizza à Portuguesa')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Pizza à Portuguesa')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -693,8 +114,8 @@
                         <div class="item-title">Pizza à Italiana</div>
                         <p class="item-description">A tradicional e impecável combinação de fatias generosas de pepperoni italiano premium, queijo mozzarella derretido e um toque final de orégãos aromáticos.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">9.500 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Pizza à Italiana')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Pizza à Italiana')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -708,8 +129,8 @@
                         <div class="item-title">Pizza à Mangolé</div>
                         <p class="item-description">Uma homenagem ao paladar nacional. Uma combinação vibrante e rica com ingredientes locais perfeitamente harmonizados sobre a nossa massa leve.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">9.000 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Pizza à Mangolé')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Pizza à Mangolé')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -725,8 +146,8 @@
                         <div class="item-title">O Hambúrguer da Apolónia</div>
                         <p class="item-description">Carne suculenta perfeitamente grelhada na chapa, queijo derretido, fiambre, ovo frito e alface. Montado com palito artesanal e acompanhado por um balde de batatas fritas crocantes.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">6.500 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('O Hambúrguer da Apolónia')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('O Hambúrguer da Apolónia')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -738,10 +159,10 @@
                     </div>
                     <div class="item-body">
                         <div class="item-title">Nossa Fahita Especial</div>
-                        <p class="item-description">O wrap enrolado de alta gastronomia, perfeitamente selado. Escolha entre as opções de Frango (4.500 KZ), Carne (5.000 KZ) ou a nossa famosa Mista (5.500 KZ).</p>
+                        <p class="item-description">O wrap enrolado de alta gastronomia, perfeitamente selado. Escolha entre as opções de Frango, Carne ou a nossa famosa Mista.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">A partir de 4.500 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Nossa Fahita Especial')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Nossa Fahita Especial')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -757,8 +178,8 @@
                         <div class="item-title">Fatia de Torta Luxo</div>
                         <p class="item-description">Camadas alternadas e húmidas de bolo de cacau fino, recheio cremoso e uma cobertura de geleia vermelha espelhada, decorada com caldas artísticas.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">3.800 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Fatia de Torta Luxo')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Fatia de Torta Luxo')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -773,7 +194,7 @@
                         <p class="item-description">Caixa de queques artesanais com topo dourado, textura incrivelmente fofa e polvilhados delicadamente com açúcar em pó.</p>
                         <div class="item-foot">
                             <div class="item-price-tag">Consulte Unid.</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Queques Folhados')">Pedir no WhatsApp</button>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Queques Folhados')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -790,7 +211,7 @@
                         <p class="item-description">Uma autêntica explosão de sabores em cada gota! Preparado no balcão por profissionais, com frutas cítricas e decorações de alto padrão.</p>
                         <div class="item-foot">
                             <div class="item-price-tag">Consulte Valor</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Cocktail de Autor')">Pedir no WhatsApp</button>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Cocktail de Autor')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -804,8 +225,8 @@
                         <div class="item-title">Café Expresso Puro</div>
                         <p class="item-description">O autêntico e encorpado expresso extraído em máquina profissional, servido na nossa chávena de porcelana corporativa Apolónia.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">600 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Cafe Expresso')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Cafe Expresso')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
@@ -819,8 +240,8 @@
                         <div class="item-title">Galão Especial e Cappuccino</div>
                         <p class="item-description">Bebida láctea quente servida em copo alto de vidro com camadas perfeitas de leite, café e espuma cremosa densa para acompanhar os salgados.</p>
                         <div class="item-foot">
-                            <div class="item-price-tag">1.200 KZ</div>
-                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Galao Especial')">Pedir no WhatsApp</button>
+                            <div class="item-price-tag">PREÇO SOB CONSULTA</div>
+                            <button class="btn-order-whatsapp" onclick="initiateTakeaway('Galao Especial')">CONSULTAR PREÇO</button>
                         </div>
                     </div>
                 </div>
